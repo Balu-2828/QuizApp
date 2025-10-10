@@ -1,0 +1,131 @@
+/* Import a modern font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* Basic setup */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa; /* A very light, clean grey */
+    color: #343a40; /* Dark charcoal for text, softer than black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* The main content container */
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* A much subtler shadow */
+    border: 1px solid #e9ecef;
+    width: 600px;
+    max-width: 95%;
+    box-sizing: border-box;
+}
+
+/* Headings */
+h1, h2, h3 {
+    text-align: center;
+    color: #212529;
+    margin-top: 0;
+    font-weight: 700;
+}
+
+/* Input fields for forms */
+input[type=text], 
+input[type=password], 
+input[type=number] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 16px 0;
+    box-sizing: border-box;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type=text]:focus, 
+input[type=password]:focus, 
+input[type=number]:focus {
+    outline: none;
+    border-color: #20c997; /* Teal accent on focus */
+    box-shadow: 0 0 0 3px rgba(32, 201, 151, 0.15);
+}
+
+/* Buttons */
+button {
+    background-color: #20c997; /* Primary color: Teal */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #1aa076; /* A darker shade of teal on hover */
+}
+
+/* Links */
+a {
+    color: #20c997;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Specific styles for the quiz page */
+.question {
+    margin-bottom: 20px;
+}
+
+.question p {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#timer, #score {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+/* Table styles for manageQuestions.html */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #dee2e6;
+    text-align: left;
+}
+th {
+    background-color: #f8f9fa; /* Light header for a clean look */
+    color: #343a40;
+    font-weight: 700;
+}
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+.actions button {
+    font-size: 12px;
+    padding: 6px 10px;
+    width: auto;
+}
+.updateBtn { background: #28a745; } /* Green for update */
+.deleteBtn { background: #dc3545; } /* Red for delete */

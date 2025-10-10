@@ -1,0 +1,142 @@
+/* Import a modern font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* Basic setup */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 20px 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e9ecef;
+    width: 95%;
+    max-width: 1600px;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #212529;
+    margin-top: 0;
+    font-weight: 700;
+}
+
+/* General button styles */
+button {
+    background-color: #20c997; /* Primary color: Teal */
+    color: white;
+    border: none;
+    padding: 10px 18px; /* Slightly smaller padding */
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: 15px; /* Slightly smaller font */
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #1aa076;
+}
+
+/* Compact input fields */
+input[type=text],
+input[type=password],
+input[type=number] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 12px 0;
+    box-sizing: border-box;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=number]:focus {
+    outline: none;
+    border-color: #20c997;
+    box-shadow: 0 0 0 3px rgba(32, 201, 151, 0.15);
+}
+
+/* Compact table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    table-layout: fixed;
+}
+th, td {
+    padding: 8px 10px;
+    border: 1px solid #dee2e6;
+    text-align: left;
+    word-wrap: break-word;
+}
+th {
+    background-color: #f8f9fa;
+    color: #343a40;
+    font-weight: 600;
+    white-space: nowrap;
+}
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+#questionsTable th:nth-child(1) { width: 4%; }
+#questionsTable th:nth-child(2) { width: 25%; }
+#questionsTable th:nth-child(3) { width: 11%; }
+#questionsTable th:nth-child(4) { width: 11%; }
+#questionsTable th:nth-child(5) { width: 11%; }
+#questionsTable th:nth-child(6) { width: 11%; }
+#questionsTable th:nth-child(7) { width: 7%; }
+#questionsTable th:nth-child(8) { width: 7%; }
+#questionsTable th:nth-child(9) { width: 7%; }
+#questionsTable th:nth-child(10) { width: 6%; }
+
+.actions button {
+    font-size: 12px;
+    padding: 5px 8px;
+    width: 100%;
+    margin: 2px 0;
+}
+.updateBtn { background: #28a745; }
+.deleteBtn { background: #dc3545; }
+
+.home-button-container {
+    margin-top: 0; /* Remove top margin */
+    text-align: right;
+}
+.homeBtn {
+    width: auto; /* Allow button to size to its content */
+    background-color: #6c757d; /* A neutral grey */
+    margin-top: 0; /* Remove top margin */
+}
+.homeBtn:hover {
+    background-color: #5a6268;
+}
+
+
+/* --- NEW HEADER STYLES --- */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Add space between header and table */
+}
+
+.header-container h2 {
+    margin: 0; /* Remove default margins from h2 */
+    text-align: left; /* Align title to the left */
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Question</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    const token = localStorage.getItem('jwtToken');
+    if (!token) {
+      window.location.href = 'login.html';
+    }
+  </script>
+
+</head>
+<body>
+<div class="container">
+  <h2>Add New Question</h2>
+  <form id="addQuestionForm">
+    <input type="text" id="questionTitle" placeholder="Question Title" required><br>
+    <input type="text" id="option1" placeholder="Option 1" required><br>
+    <input type="text" id="option2" placeholder="Option 2" required><br>
+    <input type="text" id="option3" placeholder="Option 3" required><br>
+    <input type="text" id="option4" placeholder="Option 4" required><br>
+    <input type="text" id="category" placeholder="Category" required><br>
+    <input type="text" id="rightAnswer" placeholder="Right Answer" required><br>
+    <input type="text" id="difficultyLevel" placeholder="Difficulty Level" required><br>
+    <button type="submit">Add Question</button>
+  </form>
+  <div id="message"></div>
+  <button onclick="window.location.href='index.html'">Back to Home</button>
+</div>
+
+<script>
+   //ALERT TO USERS
+alert("Warning: Admins-Only Page. This page will not work for users");
+
+
+
+ const form = document.getElementById('addQuestionForm');
+ form.addEventListener('submit', async (e) => {
+     e.preventDefault();
+     const data = {
+         questionTitle: document.getElementById('questionTitle').value,
+         option1: document.getElementById('option1').value,
+         option2: document.getElementById('option2').value,
+         option3: document.getElementById('option3').value,
+         option4: document.getElementById('option4').value,
+         category: document.getElementById('category').value,
+         rightAnswer: document.getElementById('rightAnswer').value,
+         difficultyLevel: document.getElementById('difficultyLevel').value
+     };
+      // The 'headers' object is the part to change
+   const response = await fetch('/question/add', {
+       method: 'POST',
+       headers: {
+           'Content-Type': 'application/json',
+           'Authorization': `Bearer ${token}` // <-- ADD THIS LINE
+       },
+       body: JSON.stringify(data)
+   });
+
+   const result = await response.text();
+   document.getElementById('message').innerText = result;
+   form.reset();
+});
+</script>
+</body>
+</html>
+
+
+
